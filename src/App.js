@@ -1,21 +1,15 @@
 import './App.css';
-import Machine from './Components/Machine/Machine';
+// import Machine from './Components/Machine/Machine';
+import Friend from './Components/Friend/Friend';
 
-function App() {
+function App({props}) {
   return (
     <div>
-        <h1>Slot Machines!</h1>
-        <Machine
-          s1="🍒"
-          s2="🍒"
-          s3="🍒"
-        />
-        <Machine
-          s1="🍒"
-          s2="🍒"
-          s3="🍊"
-        />
-      </div>
+      <Friend 
+        name='Elton'
+        hobbies={['singing','dancing','running']}
+      />  
+    </div>
   );
 }
 
