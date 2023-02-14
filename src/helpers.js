@@ -1,5 +1,3 @@
-const foods = [ '🍇', '🍈', '🍉', '🍊', '🍋', '🍌', '🍍', '🍎', '🍏', '🍐', '🍒', '🍓', '🥝', '🍅', '🥑' ];
-
 function choice(items) {
   const chosenItem = items[Math.floor(Math.random() * items.length)]
   return chosenItem
@@ -15,7 +13,7 @@ function remove(items, item) {
   }
 }
 
-// export {
-//   choice,
-//   remove
-// }
+export {
+  choice,
+  remove
+}
