@@ -1,29 +1,15 @@
 import './App.css';
-import Machine from './Components/Machine/Machine';
-import Friend from './Components/Friend/Friend';
-import Fruit from './Components/Fruit/Fruit';
+// import Machine from './Components/Machine/Machine';
+// import Friend from './Components/Friend/Friend';
+// import Fruit from './Components/Fruit/Fruit';
+// import Dog from './Components/Dog/Dog';
+import pokemon from './pokemon';
+import Pokedex from './Components/Pokedex/Pokedex';
 
 function App({props}) {
   return (
     <div>
-      
-      <Machine 
-        s1="X"
-        s2="X"
-        s3="X"
-      />
-
-      <Friend 
-        name='Elton'
-        hobbies={['singing','dancing','running']}
-      />  
-      
-      <Friend 
-        name='Jennie'
-        hobbies={['gaming','volleyball','exercising']}
-      />  
-
-      <Fruit />
+      <Pokedex data={pokemon}/>
     </div>
   );
 }
