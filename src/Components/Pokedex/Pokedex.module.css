@@ -1,0 +1,12 @@
+.Pokedex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.PokedexCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

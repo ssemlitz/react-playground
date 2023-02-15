@@ -5,7 +5,7 @@ const Pokedex = ({data}) => {
   return ( 
     <div className={styles.Pokedex}>
       <h1>Pokedex</h1>
-      <div>
+      <div className={styles.PokedexCard}>
         {data.map((pokemon) => (
           <Pokecard 
             id={pokemon.id}
