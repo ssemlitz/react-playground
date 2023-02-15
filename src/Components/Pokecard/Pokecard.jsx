@@ -8,12 +8,12 @@ const Pokecard = (props) => {
   let imgSrc = `${imgAPI}${imgPadding(props.id)}.png`
   return ( 
     <div className={styles.Pokecard}>
-      <h2 className={styles.Pokecard_name}>{props.name}</h2>
+      <h2 className={styles['Pokecard-name']}>{props.name}</h2>
       <div>
-        <img className={styles.Pokecard_img} src={imgSrc} alt="pokemon img" />
+        <img className={styles['Pokecard-img']} src={imgSrc} alt="pokemon img" />
       </div>
-      <div>Type: {props.type}</div>
-      <div>EXP: {props.exp}</div>
+      <div className={styles['Pokecard-data']}>Type: {props.type}</div>
+      <div className={styles['Pokecard-data']}>EXP: {props.exp}</div>
     </div>
   );
 }

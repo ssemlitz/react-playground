@@ -1,16 +1,28 @@
 .Pokecard {
   background-color: lightgray;
-  width: 200px;
+  width: 300px;
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
   text-align: center;
 }
 
-.Pokecard_name {
+.Pokecard-name {
   color: blue;
 }
 
-.Pokecard_img {
+.Pokecard-data {
+	font-size: 80%;
+}
+
+.Pokecard-img {
   padding: 5px;
+}
+
+.Pokecard img {
+	transition: all ease 500ms;
+}
+.Pokecard img:hover {
+	transform: scale(1.25);
+	opacity: 0.7;
 }
