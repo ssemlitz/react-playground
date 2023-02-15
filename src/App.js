@@ -3,13 +3,15 @@ import './App.css';
 // import Friend from './Components/Friend/Friend';
 // import Fruit from './Components/Fruit/Fruit';
 // import Dog from './Components/Dog/Dog';
+// import Pokedex from './Components/Pokedex/Pokedex';
 import pokemon from './pokemon';
-import Pokedex from './Components/Pokedex/Pokedex';
+import Pokegame from './Components/Pokegame/Pokegame';
 
 function App({props}) {
   return (
     <div>
-      <Pokedex data={pokemon}/>
+      {/* <Pokedex data={pokemon}/> */}
+      <Pokegame data={pokemon}/>
     </div>
   );
 }

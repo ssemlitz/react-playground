@@ -1,17 +1,25 @@
 import Pokecard from "../Pokecard/Pokecard";
 import styles from './Pokedex.module.css'
 
-const Pokedex = ({data}) => {
+const Pokedex = ({pokemon, exp, isWinner}) => {
+  let title
+  if (isWinner) {
+    title = <h1 className={styles['Pokedex-winner']}>Winning Hand</h1>;
+  } else {
+    title = <h1 className={styles['Pokedex-loser']}>Losing Hand</h1>;
+  }
+  
   return ( 
     <div className={styles.Pokedex}>
-      <h1>Pokedex</h1>
+      {title}
+      <h4>Total Experience: {exp}</h4>
       <div className={styles['Pokedex-card']}>
-        {data.map((pokemon) => (
+        {pokemon.map((p) => (
           <Pokecard 
-            id={pokemon.id}
-            name={pokemon.name}
-            type={pokemon.type}
-            exp={pokemon.base_experience}
+            id={p.id}
+            name={p.name}
+            type={p.type}
+            exp={p.base_experience}
           />
         ))}
       </div>
