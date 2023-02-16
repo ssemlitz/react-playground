@@ -3,6 +3,7 @@ import styles from './Pokedex.module.css'
 
 const Pokedex = ({pokemon, exp, isWinner}) => {
   let title
+
   if (isWinner) {
     title = <h1 className={styles['Pokedex-winner']}>Winning Hand</h1>;
   } else {
@@ -10,7 +11,7 @@ const Pokedex = ({pokemon, exp, isWinner}) => {
   }
   
   return ( 
-    <div className={styles.Pokedex}>
+    <div className={styles['Pokedex']}>
       {title}
       <h4>Total Experience: {exp}</h4>
       <div className={styles['Pokedex-card']}>
