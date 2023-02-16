@@ -7,7 +7,7 @@ let imgPadding = (number) => (number <= 999 ? `00${number}`.slice(-3) : number);
 const Pokecard = (props) => {
   let imgSrc = `${imgAPI}${imgPadding(props.id)}.png`
   return ( 
-    <div className={styles.Pokecard}>
+    <div className={styles['Pokecard']}>
       <h2 className={styles['Pokecard-name']}>{props.name}</h2>
       <div>
         <img className={styles['Pokecard-img']} src={imgSrc} alt={props.name} />
