@@ -1,16 +1,16 @@
 import { useState } from "react";
 
 const BrokenClick = () => {
-  const [clicked, setClicked] = useState(false)
+  const [num, setNum] = useState(0)
   
-  function handleClick(e) {
-    clicked ? setClicked(false) : setClicked(true)
+  const handleClick = (event) => {
+    setNum(Math.floor(Math.random() * 10))
   }
 
   return ( 
     <div>
-      <h1>{clicked? 'Clicked' : 'Not clicked'}</h1>
-      <button onClick={handleClick}>Click me</button>
+      <h1>Your number is {num}</h1>
+        {num === 7 ? <h1>You Win!</h1> :<button onClick={handleClick}>Random Number</button>}
     </div>
   );
 }
