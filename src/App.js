@@ -8,11 +8,12 @@ import Button from './Components/Button/Button';
 // import pokemon from './pokemon';
 // import Pokegame from './Components/Pokegame/Pokegame';
 // import Game from './Components/Game/Game';
+import BrokenClick from './Components/BrokenClick/BrokenClick';
 
 function App({props}) {
   return (
     <div>
-      <Button />
+      <BrokenClick />
     </div>
   );
 }
