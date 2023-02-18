@@ -9,13 +9,15 @@ import './App.css';
 // import Pokegame from './Components/Pokegame/Pokegame';
 // import Game from './Components/Game/Game';
 // import BrokenClick from './Components/Clicker/Clicker';
-import RollDice from './Components/RollDice/RollDice';
+// import RollDice from './Components/RollDice/RollDice';
+import ScoreKeeper from './Components/ScoreKeeper/ScoreKeeper';
 
 function App({props}) {
 
   return (
     <div>
-      <RollDice />
+      {/* <RollDice /> */}
+      <ScoreKeeper />
     </div>
   );
 }
