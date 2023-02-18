@@ -11,13 +11,15 @@ import './App.css';
 // import BrokenClick from './Components/Clicker/Clicker';
 // import RollDice from './Components/RollDice/RollDice';
 import ScoreKeeper from './Components/ScoreKeeper/ScoreKeeper';
+import IconList from './Components/IconList/IconList';
 
 function App({props}) {
 
   return (
     <div>
       {/* <RollDice /> */}
-      <ScoreKeeper />
+      {/* <ScoreKeeper /> */}
+      <IconList />
     </div>
   );
 }
