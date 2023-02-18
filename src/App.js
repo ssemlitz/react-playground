@@ -10,8 +10,9 @@ import './App.css';
 // import Game from './Components/Game/Game';
 // import BrokenClick from './Components/Clicker/Clicker';
 // import RollDice from './Components/RollDice/RollDice';
-import ScoreKeeper from './Components/ScoreKeeper/ScoreKeeper';
-import IconList from './Components/IconList/IconList';
+// import ScoreKeeper from './Components/ScoreKeeper/ScoreKeeper';
+// import IconList from './Components/IconList/IconList';
+import Lottery from './Components/Lottery/Lottery';
 
 function App({props}) {
 
@@ -19,7 +20,8 @@ function App({props}) {
     <div>
       {/* <RollDice /> */}
       {/* <ScoreKeeper /> */}
-      <IconList />
+      {/* <IconList /> */}
+      <Lottery />
     </div>
   );
 }
