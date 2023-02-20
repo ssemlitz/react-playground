@@ -1,4 +1,5 @@
 import './App.css';
+// import Coin from './Components/Coin/Coin';
 // import Button from './Components/Button/Button';
 // import Machine from './Components/Machine/Machine';
 // import Friend from './Components/Friend/Friend';
@@ -12,7 +13,9 @@ import './App.css';
 // import RollDice from './Components/RollDice/RollDice';
 // import ScoreKeeper from './Components/ScoreKeeper/ScoreKeeper';
 // import IconList from './Components/IconList/IconList';
-import Lottery from './Components/Lottery/Lottery';
+// import Lottery from './Components/Lottery/Lottery';
+// import CoinFlipper from './Components/CoinFlipper/CoinFlipper';
+import BoxDisplay from './Components/BoxDisplay/BoxDisplay';
 
 function App({props}) {
 
@@ -21,7 +24,10 @@ function App({props}) {
       {/* <RollDice /> */}
       {/* <ScoreKeeper /> */}
       {/* <IconList /> */}
-      <Lottery />
+      {/* <Lottery />
+      <Lottery title='Mini Lotto' maxNum={50} numBalls={3}/> */}
+      {/* <CoinFlipper /> */}
+      <BoxDisplay />
     </div>
   );
 }
