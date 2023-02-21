@@ -27,7 +27,7 @@ function App({props}) {
       {/* <Lottery />
       <Lottery title='Mini Lotto' maxNum={50} numBalls={3}/> */}
       {/* <CoinFlipper /> */}
-      <BoxDisplay />
+      <BoxDisplay numBoxes={20}/>
     </div>
   );
 }
