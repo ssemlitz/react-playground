@@ -67,7 +67,7 @@ const Hangman = (props) => {
         
         { nWrong < maxWrong ?
         <div>
-          <img src={images[nWrong]} alt={nWrong} />
+          <img src={images[nWrong]} alt={altText} />
           <p>Number wrong: {nWrong}</p>
           <p className={styles.HangmanWord}>{guessedWord()}</p>
           <p className={styles.HangmanBtns}>{generateButtons()}</p>

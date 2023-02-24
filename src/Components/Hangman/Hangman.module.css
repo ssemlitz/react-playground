@@ -36,19 +36,15 @@
 }
 
 #HangmanReset {
-  border: none;
-  font-family: inherit;
-  font-size: 1rem;
-  cursor: pointer;
-  width: 60px;
-  margin: 5px 2px 2px 2px;
-  letter-spacing: 1px;
-  outline: none;
-  background: #ffc107;
-  color: #fff;
-  box-shadow: 0 6px #ff9800;
-  border-radius: 5px;
-  padding-top: 4px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #9c27b0;
+  box-shadow: 0 6px #7b1fa2;
+}
+#HangmanReset:hover {
+  background: #7b1fa2;
 }
 
 .Hangman button {
