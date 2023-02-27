@@ -18,7 +18,6 @@ const Hangman = (props) => {
   const [nWrong, setNWrong] = useState(0)
   const [guessed, setGuessed] = useState(new Set())
   const [answer, setAnswer] = useState(randomWord())
-  // const answer = randomWord()
   
 
   function guessedWord() {
@@ -33,10 +32,6 @@ const Hangman = (props) => {
     setGuessed(guessed.add(ltr))
     setNWrong(nWrong + (answer.includes(ltr) ? 0 : 1))
     setNRight(nRight + (answer.includes(ltr) ? 1 : 0))
-    // this.setState(st => ({
-    //   guessed: st.guessed.add(ltr),
-    //   nWrong: st.nWrong + (st.answer.includes(ltr) ? 0 : 1)
-    // }));
   }
 
   function generateButtons() {
@@ -58,7 +53,7 @@ const Hangman = (props) => {
     setNWrong(0)
     setNRight(0)
     setGuessed(new Set())
-    setAnswer(randomWord)
+    setAnswer(randomWord())
   }
 
   return ( 

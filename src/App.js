@@ -16,7 +16,9 @@ import './App.css';
 // import Lottery from './Components/Lottery/Lottery';
 // import CoinFlipper from './Components/CoinFlipper/CoinFlipper';
 // import BoxDisplay from './Components/BoxDisplay/BoxDisplay';
-import Hangman from './Components/Hangman/Hangman';
+// import Hangman from './Components/Hangman/Hangman';
+// import Board from './Components/Board/Board';
+import Form from './Components/Form/Form';
 
 function App({props}) {
 
@@ -29,7 +31,9 @@ function App({props}) {
       <Lottery title='Mini Lotto' maxNum={50} numBalls={3}/> */}
       {/* <CoinFlipper /> */}
       {/* <BoxDisplay numBoxes={20}/> */}
-      <Hangman maxWrong={6}/>
+      {/* <Hangman maxWrong={6}/> */}
+      {/* <Board nrow={5} ncols={5} chanceLightStartsOn={.25} /> */}
+      <Form />
     </div>
   );
 }
