@@ -20,6 +20,7 @@ import './App.css';
 // import Board from './Components/Board/Board';
 // import Form from './Components/Form/Form';
 // import ShoppingList from './Components/ShoppingList/ShoppingList';
+import Box2List from './Components/Box2List/Box2List';
 
 function App({props}) {
 
@@ -36,6 +37,7 @@ function App({props}) {
       {/* <Board nrow={5} ncols={5} chanceLightStartsOn={.25} /> */}
       {/* <Form /> */}
       {/* <ShoppingList /> */}
+      <Box2List />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Box2 from "../Box2/Box2";
+import Box2 from "../Box2/Box2.jsx";
 import {v4 as uuidv4 } from 'uuid'
 import Box2Form from "../Box2Form/Box2Form";
 
@@ -18,11 +18,15 @@ const Box2List = () => {
     />
   ))
 
+    function createBox(newBox) {
+      setBoxes([...boxes, newBox])
+    }
+
   return ( 
     <>
       <h1>Color Box Maker</h1>
+      <Box2Form createBox={createBox}/>
       {allBoxes}
-      <Box2Form />
     </>
   );
 }
