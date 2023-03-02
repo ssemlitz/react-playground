@@ -1,6 +1,6 @@
 const Box2 = (props) => {
 
-  const { height, width, color } = props
+  const { height, width, color, deleteBox } = props
 
   return ( 
     <>
@@ -11,7 +11,7 @@ const Box2 = (props) => {
           backgroundColor: color
         }}>
       </div>
-      <button>X</button>
+      <button onClick={deleteBox}>X</button>
     </>
   );
 }

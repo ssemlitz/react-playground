@@ -1,13 +1,18 @@
 import { useState } from "react";
 import Box2 from "../Box2/Box2.jsx";
-import {v4 as uuidv4 } from 'uuid'
 import Box2Form from "../Box2Form/Box2Form";
 
 const Box2List = () => {
 
-  const [boxes, setBoxes] = useState([
-    {width: 10, height: 40, color: 'orange', id: uuidv4()}
-  ])
+  const [boxes, setBoxes] = useState([])
+
+  function createBox(newBox) {
+    setBoxes([...boxes, newBox])
+  }
+
+  function deleteBox(id) {
+    setBoxes(boxes.filter(box => box.id !== id))
+  }
 
   const allBoxes = boxes.map(box => (
     <Box2
@@ -15,17 +20,19 @@ const Box2List = () => {
       height={box.height}
       color={box.color}
       key={box.id}
+      id={box.id}
+      deleteBox={() => deleteBox(box.id)}
     />
   ))
 
-    function createBox(newBox) {
-      setBoxes([...boxes, newBox])
-    }
+  
+
+  
 
   return ( 
     <>
       <h1>Color Box Maker</h1>
-      <Box2Form createBox={createBox}/>
+      <Box2Form createBox={createBox} />
       {allBoxes}
     </>
   );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {v4 as uuidv4 } from 'uuid'
 
 const Box2Form = (props) => {
   
@@ -16,7 +17,8 @@ const Box2Form = (props) => {
 
   function handleSubmit(evt) {
     evt.preventDefault()
-    createBox(formData)
+    const newBox = {...formData, id: uuidv4()}
+    createBox(newBox)
     setFormData({
       height: '',
       width: '',
