@@ -18,8 +18,8 @@ import './App.css';
 // import BoxDisplay from './Components/BoxDisplay/BoxDisplay';
 // import Hangman from './Components/Hangman/Hangman';
 // import Board from './Components/Board/Board';
-import Form from './Components/Form/Form';
-import ShoppingList from './Components/ShoppingList/ShoppingList';
+// import Form from './Components/Form/Form';
+// import ShoppingList from './Components/ShoppingList/ShoppingList';
 
 function App({props}) {
 
@@ -35,7 +35,7 @@ function App({props}) {
       {/* <Hangman maxWrong={6}/> */}
       {/* <Board nrow={5} ncols={5} chanceLightStartsOn={.25} /> */}
       {/* <Form /> */}
-      <ShoppingList />
+      {/* <ShoppingList /> */}
     </div>
   );
 }
