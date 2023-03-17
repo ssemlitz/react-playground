@@ -1,8 +1,9 @@
-const Card = () => {
-  return ( 
-    <div>
+import { useState } from "react";
 
-    </div>
+const Card = () => {
+  
+  return ( 
+    <img src="" alt="" />
   );
 }
 
