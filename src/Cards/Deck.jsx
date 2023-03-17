@@ -45,9 +45,11 @@ const Deck = () => {
   ))
 
   return ( 
-    <div >
-      <button className="dealBtn" onClick={fetchCard}>GIMME A CARD</button>
-      <div className="Deck">{cards}</div>
+    <div className="Table">
+      <div>
+        <button className="dealBtn" onClick={fetchCard}>GIMME A CARD</button>
+        <div className="Deck">{cards}</div>
+      </div>
     </div>
   );
 }

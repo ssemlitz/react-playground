@@ -1,9 +1,24 @@
+body {
+  background-color: #35654d;
+}
+
 .Deck {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #35654d;
 }
 
 .dealBtn {
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 200px;
+  background-color: darkgrey;
+  color: white;
+  border-radius: 5px;
+  width: 150px;
+  height: 100px;
+}
+
+.dealBtn:hover {
+  background-color: grey;
 }
