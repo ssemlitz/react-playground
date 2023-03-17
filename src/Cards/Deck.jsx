@@ -5,7 +5,7 @@ const Deck = () => {
   
 
   const [deck, setDeck] = useState(null)
-  const [cardsDrawn, setCardsDrawn = useState([])]
+  const [cardsDrawn, setCardsDrawn] = useState([])
 
   useEffect(() => {
     const deckApi = 'https://deckofcardsapi.com/api/deck/new/shuffle/'
@@ -13,33 +13,33 @@ const Deck = () => {
     async function fetchDeck() {
       try {
         const config = {headers: {Accept: 'application/json'}}
-        const res = await axios.get(deckApi)
+        const res = await axios.get(deckApi, config)
         console.log('this is res', res);
-        setDeck(res)
+        setDeck(res.data.deck_id)
       } catch(error) {
         console.log('this is an error', error)
       }
     }
+    fetchDeck()
   }, [])
-
-  useEffect(() => {
+  
+  async function fetchCard() {
     const cardApi = `https://deckofcardsapi.com/api/deck/${deck}/draw/`
-    
-    async function fetchCard() {
-      try {
-        const config = {headers: {Accept: 'application/json'}}
-        const res = await axios.get(cardApi)
-        console.log('this is res', res);
-      } catch(error) {
-        console.log('this is an error', error)
-      }
+    try {
+      const config = {headers: {Accept: 'application/json'}}
+      const res = await axios.get(cardApi, config)
+      console.log('**********', res.data);
+      setCardsDrawn([...cardsDrawn, res.data.cards[0]])
+      console.log('%%%%%%%%%%%%%%',cardsDrawn);
+    } catch(error) {
+      console.log('this is an error', error)
     }
-    fetchCard()
-  }, [])
+  }
   
   return ( 
     <div>
-      <button>GIMME A CARD</button>
+      <button onClick={() => fetchCard()}>GIMME A CARD</button>
+      
 
     </div>
   );

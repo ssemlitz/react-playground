@@ -21,6 +21,7 @@ import './App.css';
 // import Form from './Components/Form/Form';
 // import ShoppingList from './Components/ShoppingList/ShoppingList';
 // import Box2List from './Components/Box2List/Box2List';
+import Deck from './Cards/Deck';
 
 function App({props}) {
 
@@ -38,6 +39,7 @@ function App({props}) {
       {/* <Form /> */}
       {/* <ShoppingList /> */}
       {/* <Box2List /> */}
+      <Deck />
     </div>
   );
 }
