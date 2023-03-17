@@ -3,6 +3,7 @@ import axios from "axios";
 import Card from "./Card";
 import './Deck.css'
 import { v4 as uuidv4 } from 'uuid';
+import { randomNumber } from "../helpers";
 
 const Deck = () => {
   
@@ -44,9 +45,9 @@ const Deck = () => {
   ))
 
   return ( 
-    <div>
-      <button onClick={() => fetchCard()}>GIMME A CARD</button>
-      <div>{cards}</div>
+    <div >
+      <button className="dealBtn" onClick={fetchCard}>GIMME A CARD</button>
+      <div className="Deck">{cards}</div>
     </div>
   );
 }

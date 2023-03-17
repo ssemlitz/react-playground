@@ -1,0 +1,9 @@
+.Deck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dealBtn {
+  margin-top: 50px;
+}
