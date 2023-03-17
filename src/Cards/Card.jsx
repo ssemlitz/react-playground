@@ -1,9 +1,11 @@
 import { useState } from "react";
 
-const Card = () => {
+const Card = (props) => {
   
+  const { name, img} = props
+
   return ( 
-    <img src="" alt="" />
+    <img className="Card" src={img} alt={name} />
   );
 }
 

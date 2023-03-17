@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Card from "./Card";
+import './Deck.css'
+import { v4 as uuidv4 } from 'uuid';
 
 const Deck = () => {
   
@@ -36,11 +39,14 @@ const Deck = () => {
     }
   }
   
+  const cards = cardsDrawn.map(card => (
+    <Card key={uuidv4()} name={card.code} img={card.image}/>
+  ))
+
   return ( 
     <div>
       <button onClick={() => fetchCard()}>GIMME A CARD</button>
-      
-
+      <div>{cards}</div>
     </div>
   );
 }
