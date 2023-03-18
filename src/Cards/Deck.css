@@ -21,3 +21,9 @@ body {
 .dealBtn:hover {
   background-color: grey;
 }
+
+.allCardsDrawnText {
+  margin-top: 25px;
+  margin-bottom: 200px;
+  color: white;
+}

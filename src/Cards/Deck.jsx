@@ -45,7 +45,11 @@ const Deck = () => {
 
   return ( 
     <div>
-      <button className="dealBtn" onClick={fetchCard}>GIMME A CARD</button>
+      {cardsDrawn.length >= 52 ? 
+        <h4 className="allCardsDrawnText">You've drawn all the cards</h4>
+        :
+        <button className="dealBtn" onClick={fetchCard}>GIMME A CARD</button>
+      }      
       <div className="Deck">{cards}</div>
     </div>
   );
