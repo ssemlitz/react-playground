@@ -1,14 +1,14 @@
 
 
-const Joke = (props) => {
+const Joke = ({joke}) => {
   return ( 
     <div>
       <div>
         <button>-</button>
-        <h1>votes</h1>
+        <h4>{joke.votes}</h4>
         <button>+</button>
       </div>
-      <h1>Joke text goes here</h1>
+      <h4>{joke.joke}</h4>
     </div>
   );
 }
