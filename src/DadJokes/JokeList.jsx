@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
-
+import Joke from "./Joke";
 
 const JokeList = () => {
   
@@ -41,7 +41,9 @@ const JokeList = () => {
 
   return ( 
     <div>
-      {jokesList}
+      {jokesList.map(()=>(
+        <Joke />
+      ))}
     </div>
   );
 }
