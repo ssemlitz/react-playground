@@ -67,20 +67,44 @@ const JokeList = () => {
   //   <h1>{joke.joke}</h1>
   // ))
 
+  // useEffect(() => {
+  //   const initialJokes = async () => {
+  //     try {
+  //       const newJokes = await Promise.all([...Array(10)].map(fetchJoke))
+  //       setJokesArray(newJokes)
+  //     } catch (error) {
+  //       console.log('ERROR!: ', error)
+  //       return "No jokes for you, sorry!"
+  //     }
+  //   }
+  //   initialJokes()
+  // }, [])
+
   useEffect(() => {
     const initialJokes = async () => {
       try {
-        const newJokes = await Promise.all([...Array(10)].map(fetchJoke))
-        setJokesArray(newJokes)
+        const newJokes = [];
+        for (let i = 0; i < 10; i++) {
+          const joke = await fetchJoke();
+          newJokes.push(joke);
+        }
+        setJokesArray(newJokes);
       } catch (error) {
-        console.log('ERROR!: ', error)
-        return "No jokes for you, sorry!"
+        console.log('ERROR!: ', error);
+        return 'No jokes for you, sorry!';
       }
-    }
-    initialJokes()
-  }, [])
+    };
+    initialJokes();
+  }, []);
 
-  const jokesList = jokesArray.map(joke => (
+  const handleClick = async () => {
+    let newJokesArray = [...jokesArray];
+    const joke = await fetchJoke();
+    newJokesArray.push(joke);
+    setJokesArray(newJokesArray)
+  }
+
+  const jokesList = jokesArray.map((joke) => (
     <Joke 
       key={uuidv4()}
       joke={joke}
@@ -89,6 +113,7 @@ const JokeList = () => {
 
   return ( 
     <div>
+      <button onClick={() => handleClick()}>Add Joke</button>
       {jokesList}
     </div>
   );
