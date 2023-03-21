@@ -6,7 +6,7 @@ const Joke = ({joke}) => {
   const [votes, setVotes] = useState(joke.votes)
 
   const handleClick = (amount) => {
-    setVotes((prevVotes) => prevVotes + amount);
+    setVotes((votes) => votes + amount);
   };
 
   return ( 

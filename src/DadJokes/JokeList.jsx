@@ -85,9 +85,16 @@ const JokeList = () => {
       try {
         const newJokes = [];
         for (let i = 0; i < 10; i++) {
-          const joke = await fetchJoke();
-          newJokes.push(joke);
+          setIsLoading(true)
+          let joke = await fetchJoke();
+          if (newJokes.some(newJoke => newJoke.id === joke.id )) {
+            joke = await fetchJoke()
+            newJokes.push(joke)
+          } else {
+            newJokes.push(joke)
+          }
         }
+        setIsLoading(false)
         setJokesArray(newJokes);
       } catch (error) {
         console.log('ERROR!: ', error);
@@ -98,10 +105,13 @@ const JokeList = () => {
   }, []);
 
   const handleClick = async () => {
-    let newJokesArray = [...jokesArray];
-    const joke = await fetchJoke();
-    newJokesArray.push(joke);
-    setJokesArray(newJokesArray)
+    let newJoke = await fetchJoke();
+    if (jokesArray.some(joke => joke.id === newJoke.id )) {
+      newJoke = await fetchJoke()
+      setJokesArray([...jokesArray, newJoke])
+    } else {
+      setJokesArray([...jokesArray, newJoke])
+    }
   }
 
   const jokesList = jokesArray.map((joke) => (
@@ -114,6 +124,7 @@ const JokeList = () => {
   return ( 
     <div>
       <button onClick={() => handleClick()}>Add Joke</button>
+      
       {jokesList}
     </div>
   );
