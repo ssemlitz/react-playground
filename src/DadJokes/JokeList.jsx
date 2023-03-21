@@ -33,7 +33,7 @@ const JokeList = () => {
   const fetchJoke = async () => {
     try {
       const config = { headers: { Accept: 'application/json' } }
-      const res = await axios.get('https://icanhazdadjoke.com', config)
+      const res = await axios.get(api, config)
       let newJoke = res.data
       newJoke.votes = 0
       // setJoke(newJoke)
@@ -115,17 +115,43 @@ const JokeList = () => {
     }
   }
 
-  const jokesList = jokesArray.map((joke) => (
+  const handleVote = (id, amount) => {
+    const updatedJokesArray = jokesArray.map(joke => {
+      if (joke.id === id) {
+        return {...joke, votes: joke.votes + amount}
+      } else {
+        return joke
+      }
+    })
+    setJokesArray(updatedJokesArray)
+  };
+
+  const sortedJokes = jokesArray.sort((a, b) => b.votes - a.votes)
+  
+  const jokesList = sortedJokes.map((joke) => (
     <Joke 
       key={uuidv4()}
       joke={joke}
+      handleVote={handleVote}
     />
   ))
 
   return ( 
-    <div>
-      <button onClick={() => handleClick()}>Add Joke</button>
-      {isLoading ? <div className="loader"></div>: jokesList }
+    <div className="jokeListBody">
+      
+      {isLoading ? <div className="loader"></div>
+      : 
+      <div className="jokeList">
+        <div className="sidebar">
+          <h2>Dad Jokes</h2>
+          <img src='https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg' alt="smiley emoji" />
+          <button onClick={() => handleClick()}>Add Joke</button>
+        </div>
+        <div className="jokesContainer">
+          {jokesList} 
+        </div>
+      </div> 
+      }
       
     </div>
   );

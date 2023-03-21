@@ -1,20 +1,22 @@
 import './Joke.css'
 import { useState } from 'react';
 
-const Joke = ({joke}) => {
+const Joke = ({joke, handleVote}) => {
   
   const [votes, setVotes] = useState(joke.votes)
 
   const handleClick = (amount) => {
-    setVotes((votes) => votes + amount);
-  };
+    handleVote(joke.id, amount)
+  }
 
   return ( 
     <div className="joke">
       <div className="voteBtns">
-        <button onClick={() => handleClick(-1)}>-</button>
-        <h4>{votes}</h4>
-        <button onClick={() => handleClick(1)}>+</button>
+        <i className='voteBtn fa-sharp fa-solid fa-arrow-down' onClick={() => handleClick(-1)}></i>
+        <div className='votes'>
+        {votes}
+        </div>
+        <i className='voteBtn fa-sharp fa-solid fa-arrow-up' onClick={() => handleClick(1)}></i>
       </div>
       <h4>{joke.joke}</h4>
     </div>

@@ -3,9 +3,27 @@
   width: 80%;
 }
 
+.votes {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .voteBtns {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+
+.voteBtn {
+  font-size: 1.5rem;
+  margin: 10px;
+  cursor: pointer;
+
 }
