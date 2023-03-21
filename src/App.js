@@ -27,7 +27,7 @@ import JokeList from './DadJokes/JokeList';
 function App({props}) {
 
   return (
-    <div>
+    <div className='App'>
       {/* <RollDice /> */}
       {/* <ScoreKeeper /> */}
       {/* <IconList /> */}
