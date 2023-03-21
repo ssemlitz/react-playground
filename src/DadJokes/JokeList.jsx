@@ -143,9 +143,9 @@ const JokeList = () => {
       : 
       <div className="jokeList">
         <div className="sidebar">
-          <h2>Dad Jokes</h2>
+          <h2 className="title">Dad Jokes</h2>
           <img src='https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg' alt="smiley emoji" />
-          <button onClick={() => handleClick()}>Add Joke</button>
+          <button className="sidebarBtn" onClick={() => handleClick()}>Add Joke</button>
         </div>
         <div className="jokesContainer">
           {jokesList} 
