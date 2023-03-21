@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import Joke from "./Joke";
+import './JokeList.css'
 
 const JokeList = () => {
   
@@ -124,8 +125,8 @@ const JokeList = () => {
   return ( 
     <div>
       <button onClick={() => handleClick()}>Add Joke</button>
+      {isLoading ? <div className="loader"></div>: jokesList }
       
-      {jokesList}
     </div>
   );
 }
