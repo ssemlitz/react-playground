@@ -26,6 +26,9 @@ const Joke = ({joke, handleVote}) => {
       return "#f44336";
     }
   }
+
+
+
   function getEmoji() {
     if (votes >= 15) {
       return "em em-rolling_on_the_floor_laughing";
@@ -48,7 +51,7 @@ const Joke = ({joke, handleVote}) => {
     <div className="joke">
       <div className="voteBtns">
         <i className='voteBtn fa-sharp fa-solid fa-arrow-down' onClick={() => handleClick(-1)}></i>
-        <div className='votes'>
+        <div className='votes' style={{borderColor: getColor(), borderWidth: '3px'}}>
         {votes}
         </div>
         <i className='voteBtn fa-sharp fa-solid fa-arrow-up' onClick={() => handleClick(1)}></i>

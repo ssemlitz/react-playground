@@ -22,7 +22,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
 }
 
 .voteBtn {
@@ -42,3 +41,4 @@
   border-radius: 50%;
   box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1);
 }
+
